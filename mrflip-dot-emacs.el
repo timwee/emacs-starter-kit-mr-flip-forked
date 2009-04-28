@@ -30,4 +30,8 @@
 (put 'upcase-region	 'disabled nil)
 (put 'downcase-region	 'disabled nil)
 
+;; yasnippet
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/snippets")
+
 (provide 'mrflip-dot-emacs)
