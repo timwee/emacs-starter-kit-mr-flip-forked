@@ -1,0 +1,18 @@
+[submodule "vendor/rspec"]
+	path = vendor/rspec
+	url = git://github.com/pezra/rspec-mode.git
+[submodule "vendor/rhtml"]
+	path = vendor/rhtml
+	url = git://github.com/eschulte/rhtml.git
+[submodule "vendor/rinari"]
+	path = vendor/rinari
+	url = git://github.com/eschulte/rinari.git
+[submodule "vendor/sinatra"]
+	path = vendor/sinatra
+	url = git://github.com/eschulte/sinatra_el.git
+[submodule "vendor/rorg"]
+	path = vendor/rorg
+	url = git://github.com/eschulte/rorg.git
+[submodule "vendor/ess"]
+	path = vendor/ess
+	url = git://github.com/eschulte/ess.git
