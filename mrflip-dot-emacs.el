@@ -23,12 +23,11 @@
   ;;else
   (set-default-font "fixed") ) 
 
-
-
 ;; Several mysterious but important customizations.
 (set-input-mode t nil t)
 (put 'eval-expression	 'disabled nil)
 (put 'narrow-to-region	 'disabled nil)
 (put 'upcase-region	 'disabled nil)
 (put 'downcase-region	 'disabled nil)
+
 (provide 'mrflip-dot-emacs)
