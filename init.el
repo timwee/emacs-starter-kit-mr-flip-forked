@@ -22,6 +22,11 @@
 (setq package-user-dir (concat dotfiles-dir "elpa"))
 (setq custom-file (concat dotfiles-dir "custom.el"))
 
+(setq emacs22up (>= emacs-major-version 22))
+(setq emacs21up (>= emacs-major-version 21))
+(setq emacs20up (>= emacs-major-version 20))
+(setq emacs19up (>= emacs-major-version 19))
+
 ;; These should be loaded on startup rather than autoloaded on demand
 ;; since they are likely to be used in every session
 
@@ -53,6 +58,11 @@
 (require 'starter-kit-perl)
 (require 'starter-kit-ruby)
 (require 'starter-kit-js)
+(require 'mrflip-faces)
+(require 'mrflip-modes)
+(require 'mrflip-dot-emacs)
+(require 'mrflip-defuns)
+(require 'mrflip-bindings)
 
 (regen-autoloads)
 (load custom-file 'noerror)
