@@ -18,6 +18,7 @@
 ;;;                                "haml"
 ;;;                                "sass"
 ;;;                                "cheat"
+;;;                                "feature-mode"
 ;;;                                "html-fontify"
 ;;;                                "color-theme"
 ;;;                                "color-theme-zenburn"

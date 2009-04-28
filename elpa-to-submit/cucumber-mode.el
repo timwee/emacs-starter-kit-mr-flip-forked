@@ -80,7 +80,7 @@
 ;;
 
 (defvar feature-mode-hook nil
-  "Hook run when entering `feature-mode'.")
+  "Hook run when entering 'feature-mode'.")
 
 (defcustom feature-indent-level 2
   "Indentation of feature statements"

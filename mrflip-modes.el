@@ -10,6 +10,9 @@
        '(("perl"    . cperl-mode))
        interpreter-mode-alist))
 
+(add-to-list 'load-path "~/.emacs.d/elpa-to-submit/cucumber-mode")
+(autoload    'feature-mode "cucumber-mode" "Mode for editing cucumber files" t)
+
 ;; (insert (prin1-to-string auto-mode-alist))
 (setq auto-mode-alist (append (list
     '("\\(M\\|m\\|GNUm\\)akefile\\([.-].*\\)?\\'" . makefile-mode)
@@ -27,8 +30,11 @@
     '("\\.sass$"                       . sass-mode)
     '("\\.pig\\'"                      . sql-mode)
     '("\\.ya?ml\\'"                    . yaml-mode)
+    '("\.feature$"                     . feature-mode)
     ;; add more modes here
     ) auto-mode-alist))
+
+
 ;; if it's a shebang script, make is exemacutable
 (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
 
@@ -39,17 +45,15 @@
 ;; (autoload 'longlines-mode	"longlines.el"		"Minor mode for automatically wrapping long lines." t)
 ;; (autoload 'nxml-mode		"nxml-mode.el"		"Major mode for XML files." t)
 ;; (autoload 'css-mode		"css-mode.el"		"Major mode for CSS files." t)
-;; ;; (autoload 'matlab-mode		"matlab-mode"		"Enter Matlab mode." t)
-;; (autoload 'python-mode		"python-mode"		"Mode for editing python files." t)
+;; ;; (autoload 'matlab-mode	"matlab-mode"		"Enter Matlab mode." t)
+;; (autoload 'python-mode	"python-mode"		"Mode for editing python files." t)
 ;; (autoload 'yaml-mode		"yaml-mode"		"Mode for editing YAML files." t)
 ;; (autoload 'ruby-mode		"ruby-mode"		"Ruby editing mode." t)
-;; (autoload 'run-ruby 		"inf-ruby"		"Run an inferior Ruby process" t)
-;; (autoload 'inf-ruby-keys 	"inf-ruby"		"Set local key defs for inf-ruby in ruby-mode" t)
-;; (autoload 'sass-mode            "sass-mode"             "Mode for SASS (CSS done right)" t)
-;; (autoload 'haml-mode            "haml-mode"             "Mode for HAML" t)
-;; (add-to-list 'load-path "~/.emacs.d/cucumber-mode")
-;; (autoload    'cucumber-mode "cucumber-mode" "Mode for editing cucumber files" t)
-;; (add-to-list 'feature-mode '("\.feature$" . cucumber-mode))
+;; (autoload 'run-ruby		"inf-ruby"		"Run an inferior Ruby process" t)
+;; (autoload 'inf-ruby-keys	"inf-ruby"		"Set local key defs for inf-ruby in ruby-mode" t)
+;; (autoload 'sass-mode		"sass-mode"		"Mode for SASS (CSS done right)" t)
+;; (autoload 'haml-mode		"haml-mode"		"Mode for HAML" t)
+;; (autoload 'feature-mode 	"cucumber-mode" 	"Mode for editing cucumber files" t)
 
 (defun ruby-eval-buffer () (interactive)
   "Evaluate the buffer with ruby."
@@ -58,6 +62,11 @@
   (lambda()
     (add-hook 'local-write-file-hooks '(lambda() (save-excursion (untabify (point-min) (point-max)) (delete-trailing-whitespace) )))
     ;; (set (make-local-variable 'indent-tabs-mode) 'nil)
+    (imenu-add-to-menubar "IMENU")
+    ;; (require 'ruby-electric)
+    ;; (ruby-electric-mode t)
+    ;; (inf-ruby-keys)
+    ;; (rails-minor-mode)
     ))
 ;; (add-hook 'ruby-mode-hook 'turn-on-font-lock)
 (add-hook 'haml-mode-hook (lambda () (set (make-local-variable 'indent-tabs-mode) 'nil) ))
