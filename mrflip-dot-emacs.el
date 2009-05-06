@@ -30,6 +30,7 @@
 (put 'upcase-region	 'disabled nil)
 (put 'downcase-region	 'disabled nil)
 (prefer-coding-system    'utf-8)
+(column-number-mode t)		;; Display column number on mode line	
 
 ;; yasnippet
 (yas/initialize)

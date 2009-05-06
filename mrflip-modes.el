@@ -30,7 +30,7 @@
     '("\\.sass$"                       . sass-mode)
     '("\\.pig\\'"                      . sql-mode)
     '("\\.ya?ml\\'"                    . yaml-mode)
-    '("\.feature$"                     . feature-mode)
+    '("\.feature\(\.erb\)?$"           . feature-mode)
     ;; add more modes here
     ) auto-mode-alist))
 
@@ -41,19 +41,19 @@
 ;; ;;
 ;; ;; ------------------ Add extensions to Mode list ----------------
 ;; ;;
-;; (autoload 'actionscript-mode	"actionscript-mode.el"	"Major mode for Flex/Actionscript .as files." t)
-;; (autoload 'longlines-mode	"longlines.el"		"Minor mode for automatically wrapping long lines." t)
-;; (autoload 'nxml-mode		"nxml-mode.el"		"Major mode for XML files." t)
-;; (autoload 'css-mode		"css-mode.el"		"Major mode for CSS files." t)
-;; ;; (autoload 'matlab-mode	"matlab-mode"		"Enter Matlab mode." t)
-;; (autoload 'python-mode	"python-mode"		"Mode for editing python files." t)
-;; (autoload 'yaml-mode		"yaml-mode"		"Mode for editing YAML files." t)
-;; (autoload 'ruby-mode		"ruby-mode"		"Ruby editing mode." t)
-;; (autoload 'run-ruby		"inf-ruby"		"Run an inferior Ruby process" t)
-;; (autoload 'inf-ruby-keys	"inf-ruby"		"Set local key defs for inf-ruby in ruby-mode" t)
-;; (autoload 'sass-mode		"sass-mode"		"Mode for SASS (CSS done right)" t)
-;; (autoload 'haml-mode		"haml-mode"		"Mode for HAML" t)
-;; (autoload 'feature-mode 	"cucumber-mode" 	"Mode for editing cucumber files" t)
+;; (autoload 'actionscript-mode "actionscript-mode.el"  "Major mode for Flex/Actionscript .as files." t)
+;; (autoload 'longlines-mode    "longlines.el"          "Minor mode for automatically wrapping long lines." t)
+;; (autoload 'nxml-mode         "nxml-mode.el"          "Major mode for XML files." t)
+;; (autoload 'css-mode          "css-mode.el"           "Major mode for CSS files." t)
+;; ;; (autoload 'matlab-mode    "matlab-mode"           "Enter Matlab mode." t)
+;; (autoload 'python-mode       "python-mode"           "Mode for editing python files." t)
+;; (autoload 'yaml-mode         "yaml-mode"             "Mode for editing YAML files." t)
+;; (autoload 'ruby-mode         "ruby-mode"             "Ruby editing mode." t)
+;; (autoload 'run-ruby          "inf-ruby"              "Run an inferior Ruby process" t)
+;; (autoload 'inf-ruby-keys     "inf-ruby"              "Set local key defs for inf-ruby in ruby-mode" t)
+;; (autoload 'sass-mode         "sass-mode"             "Mode for SASS (CSS done right)" t)
+;; (autoload 'haml-mode         "haml-mode"             "Mode for HAML" t)
+;; (autoload 'feature-mode      "cucumber-mode"         "Mode for editing cucumber files" t)
 
 (defun ruby-eval-buffer () (interactive)
   "Evaluate the buffer with ruby."
@@ -64,8 +64,8 @@
     ;; (set (make-local-variable 'indent-tabs-mode) 'nil)
     (imenu-add-to-menubar "IMENU")
     ;; (require 'ruby-electric)
-    ;; (ruby-electric-mode t)
-    ;; (inf-ruby-keys)
+    (ruby-electric-mode t)
+    (inf-ruby-keys)
     ;; (rails-minor-mode)
     ))
 ;; (add-hook 'ruby-mode-hook 'turn-on-font-lock)

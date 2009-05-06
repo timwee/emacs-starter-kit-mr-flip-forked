@@ -3,20 +3,25 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 
-;; (custom-set-faces
+;;
+
+(custom-set-faces
+ '(develock-bad-manner-face                  ((t (:background "#e8e8e8" :foreground "#805010" :weight bold))))
+ '(develock-lonely-parentheses-face          ((t (:background "white" :foreground "#202050"))))
+ '(develock-long-line-face-1                 ((t (:foreground "#330000"))))
+ '(develock-long-line-face-2                 ((t (:background "#ececb0" :foreground "#330000"))))
+ '(develock-upper-case-attribute-face        ((t (:background "#d0f0d0" :foreground "#004000"))))
+ '(develock-upper-case-tag-face              ((t (:background "#f0f0f0" :foreground "#400000"))))
+ '(develock-whitespace-face-1                ((t (:background "white"))))
+ '(develock-whitespace-face-2                ((t (:background "white"))))
+ '(develock-whitespace-face-3                ((t (:background "white"))))
+ 
+)
+
  ;; '(custom-changed                            ((((min-colors 88) (class color)) (:background "#2222dd" :foreground "#cccccc"))))
  ;; '(custom-group-tag                          ((((min-colors 88) (class color) (background light)) (:inherit variable-pitch :foreground "blue1" :weight bold :height 1.2))))
  ;; '(custom-group-tag-1                        ((((min-colors 88) (class color) (background light)) (:inherit variable-pitch :foreground "#aa0000" :weight bold :height 1.2))))
  ;; 
- ;; '(develock-bad-manner-face                  ((t (:background "#e8e8e8" :foreground "#805010" :weight bold))))
- ;; '(develock-lonely-parentheses-face          ((t (:background "white" :foreground "#202050"))))
- ;; '(develock-long-line-face-1                 ((t (:foreground "#330000"))))
- ;; '(develock-long-line-face-2                 ((t (:background "#ececb0" :foreground "#330000"))))
- ;; '(develock-upper-case-attribute-face        ((t (:background "#d0f0d0" :foreground "#004000"))))
- ;; '(develock-upper-case-tag-face              ((t (:background "#f0f0f0" :foreground "#400000"))))
- ;; '(develock-whitespace-face-1                ((t (:background "white"))))
- ;; '(develock-whitespace-face-2                ((t (:background "white"))))
- ;; '(develock-whitespace-face-3                ((t (:background "white"))))
  ;; 
  ;; 
  ;; '(cperl-array-face                          ((((class color) (background light)) (:foreground "#662288" :weight bold))))
@@ -51,6 +56,6 @@
  ;; '(vhdl-speedbar-package-face                ((((class color) (background light)) (:inherit speedbar-file-face :foreground "#222222"))))
  ;; '(vhdl-speedbar-package-selected-face       ((((class color) (background light)) (:inherit speedbar-file-face :foreground "Grey50" :underline t))))
  ;; '(vhdl-speedbar-subprogram-face             ((((class color) (background light)) (:inherit speedbar-file-face :foreground "Orchid4"))))
-;; )
+;;
 
 (provide 'mrflip-faces)
