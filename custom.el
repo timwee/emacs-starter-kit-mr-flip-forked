@@ -34,6 +34,7 @@
  '(flymake-gui-warnings-enabled nil)
  '(frame-title-format "[%b] in %F, %f" t)
  '(hl-line-mode nil t)
+ '(ibuffer-expert t)
  '(icon-title-format "%b" t)
  '(indent-region-mode nil t)
  '(inhibit-startup-screen t)
@@ -67,6 +68,15 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(compilation-warning ((((class color) (min-colors 16)) (:foreground "#b86833" :weight bold))))
+ '(develock-bad-manner-face ((t (:background "#e8e8e8" :foreground "#805010" :weight bold))))
+ '(develock-lonely-parentheses-face ((t (:background "white" :foreground "#202050"))))
+ '(develock-long-line-face-1 ((t (:foreground "#330000"))))
+ '(develock-long-line-face-2 ((t (:background "#ececb0" :foreground "#330000"))))
+ '(develock-upper-case-attribute-face ((t (:background "#d0f0d0" :foreground "#004000"))))
+ '(develock-upper-case-tag-face ((t (:background "#f0f0f0" :foreground "#400000"))))
+ '(develock-whitespace-face-1 ((t (:background "white"))))
+ '(develock-whitespace-face-2 ((t (:background "white"))))
+ '(develock-whitespace-face-3 ((t (:background "white"))))
  '(font-lock-builtin-face ((((class color) (background light)) (:foreground "DarkSlateBlue"))))
  '(font-lock-comment-face ((((class color) (background light)) (:foreground "#004000"))))
  '(font-lock-constant-face ((((class color) (background light)) (:foreground "#772828"))))

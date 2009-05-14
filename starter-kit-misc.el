@@ -68,7 +68,7 @@
 (set-default 'indicate-empty-lines t)
 (set-default 'imenu-auto-rescan t)
 
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
+;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
 ;; (add-hook 'text-mode-hook 'turn-on-flyspell)
 
 (defvar coding-hook nil
@@ -86,11 +86,11 @@
                                         (concat dotfiles-dir "backups")))))
 
 ;; nxhtml stuff
-(setq mumamo-chunk-coloring 'submode-colored
-      nxhtml-skip-welcome t
+(setq nxhtml-skip-welcome t
       indent-region-mode t
       rng-nxml-auto-validate-flag nil)
-
+;; mumamo-chunk-coloring 'submode-colored
+      
 ;; Associate modes with file extensions
 
 (add-to-list 'auto-mode-alist '("COMMIT_EDITMSG$" . diff-mode))

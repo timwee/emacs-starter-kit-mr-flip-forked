@@ -10,8 +10,8 @@
 ;;;;   Set Window Font, Size and Position
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-(setq default-frame-alist '( (left . -1) (top . 0) (width . 90)  (height . 50) )) 
-(setq initial-frame-alist '( (left . 0)  (top . 0) (width . 110) (height . 60) ))
+(setq default-frame-alist '( (left . -1) (top . 0) (width . 90)  (height . 40) )) 
+(setq initial-frame-alist '( (left . 0)  (top . 0) (width . 110) (height . 50) ))
 
 (setq myfont "-apple-bitstream vera sans mono-medium-r-normal--0-0-0-0-m-0-iso10646-1")
 ;;(set-default-font "fixed")
@@ -33,7 +33,7 @@
 (column-number-mode t)		;; Display column number on mode line	
 
 ;; yasnippet
-(yas/initialize)
-(yas/load-directory "~/.emacs.d/snippets")
+;; (yas/initialize)
+;; (yas/load-directory "~/.emacs.d/snippets")
 
 (provide 'mrflip-dot-emacs)
