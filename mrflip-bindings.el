@@ -116,11 +116,12 @@
 (global-set-key  (kbd "s-w")            'delete-region)
 (global-set-key  (kbd "s-k")            'delete-line)
 (global-set-key  (kbd "s-d")            'delete-next-word)
-(global-set-key  (kbd "C-x C-2")        'set-tab-width-4)
+(global-set-key  (kbd "C-x C-2")        'set-tab-width-2)
 (global-set-key  (kbd "C-x C-4")        'set-tab-width-4)
 (global-set-key  (kbd "C-x C-8")        'set-tab-width-8)
 (global-set-key  (kbd "<S-tab>")        'unindent-line-or-region-rigidly)
 (global-set-key  (kbd "<C-tab>")        'indent-line-or-region-rigidly)
+(global-set-key  (kbd "<C-S-tab>")      'indent-code-rigidly)
 
 (global-set-key  [C-f1]                 'customize-apropos)
 (global-set-key  [f8]                   'kmacro-end-and-call-macro)

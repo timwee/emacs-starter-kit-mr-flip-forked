@@ -33,7 +33,7 @@
 (column-number-mode t)		;; Display column number on mode line	
 
 ;; yasnippet
-(yas/initialize)
-(yas/load-directory "~/.emacs.d/snippets")
+;; (yas/initialize)
+;; (yas/load-directory "~/.emacs.d/snippets")
 
 (provide 'mrflip-dot-emacs)
