@@ -64,6 +64,11 @@ Symbols matching the text at point are put first in the completion list."
 
 ;;; These belong in coding-hook:
 
+;; We have a number of turn-on-* functions since it's advised that lambda
+;; functions not go in hooks. Repeatedly evaling an add-to-list with a
+;; hook value will repeatedly add it since there's no way to ensure
+;; that a lambda doesn't already exist in the list.
+
 (defun local-column-number-mode ()
   (make-local-variable 'column-number-mode)
   (column-number-mode t))
@@ -77,6 +82,12 @@ Symbols matching the text at point are put first in the completion list."
 
 (defun turn-on-save-place-mode ()
   (setq save-place t))
+
+(defun turn-on-whitespace ()
+  (whitespace-mode t))
+
+(defun turn-off-tool-bar ()
+  (tool-bar-mode -1))
 
 (add-hook 'coding-hook 'local-column-number-mode)
 (add-hook 'coding-hook 'local-comment-auto-fill)
@@ -147,13 +158,13 @@ Symbols matching the text at point are put first in the completion list."
               (some (lambda (f) (file-newer-than-file-p f autoload-file))
                     (directory-files autoload-dir t "\\.el$")))
       (message "Updating autoloads...")
-      (update-directory-autoloads autoload-dir)))
+      (let (emacs-lisp-mode-hook)
+        (update-directory-autoloads autoload-dir))))
   (load autoload-file))
 
-;; TODO: fix this
 (defun sudo-edit (&optional arg)
   (interactive "p")
-  (if arg
+  (if (or arg (not buffer-file-name))
       (find-file (concat "/sudo:root@localhost:" (ido-read-file-name "File: ")))
     (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
 
@@ -185,6 +196,13 @@ Symbols matching the text at point are put first in the completion list."
   "If you can't pair program with a human, use this instead."
   (interactive)
   (message (if (y-or-n-p "Do you have a test for that? ") "Good." "Bad!")))
+
+(defun esk-paredit-nonlisp ()
+  "Turn on paredit mode for non-lisps."
+  (set (make-local-variable 'paredit-space-for-delimiter-predicate)
+       (lambda (endp delimiter)
+         (equal (char-syntax (char-before)) ?\")))
+  (paredit-mode 1))
 
 ;; A monkeypatch to cause annotate to ignore whitespace
 (defun vc-git-annotate-command (file buf &optional rev)
