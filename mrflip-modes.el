@@ -26,7 +26,7 @@
     '("\\.[rsx]html?\\(\\.erb\\)?\\'"  . nxhtml-mode)
     '("\\.py.?\\'"                     . python-mode)
     '("\\([cC]ap\\|[Rr]ake\\)file\\'"  . ruby-mode)
-    '("\\.gemspec$"                    . ruby-mode)
+    '("\\.\\(gemspec\\|god\\)$"        . ruby-mode)
     '("\\.sass$"                       . sass-mode)
     '("\\.pig\\'"                      . sql-mode)
     '("\\.ya?ml\\'"                    . yaml-mode)
