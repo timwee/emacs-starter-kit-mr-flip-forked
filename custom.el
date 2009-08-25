@@ -49,7 +49,7 @@
  '(inhibit-startup-screen t)
  '(javascript-indent-level 2)
  '(js2-dynamic-idle-timer-adjust 2)
- '(js2-idle-timer-delay 4)
+ '(js2-idle-timer-delay 1)
  '(mac-option-modifier (quote super))
  '(mark-even-if-inactive t)
  '(nxhtml-default-encoding (quote utf-8))
