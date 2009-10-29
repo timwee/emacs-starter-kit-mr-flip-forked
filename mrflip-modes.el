@@ -31,6 +31,7 @@
     '("\\.pig\\'"                      . sql-mode)
     '("\\.ya?ml\\'"                    . yaml-mode)
     '("\.feature\(\.erb\)?$"           . feature-mode)
+    '("\.ile\.txt\\'"                  . textile-mode)
     ;; add more modes here
     ) auto-mode-alist))
 
