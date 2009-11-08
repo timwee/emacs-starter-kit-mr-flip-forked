@@ -7,28 +7,10 @@
                                    'inf-ruby
                                    'js2-mode
                                    'css-mode
-                                   ;; 'nxml
                                    'gist
+                                   
                                    'rinari
-                               ;; To submit
-;;;                                "magit"
-;;;                                "clojure-mode"
-;;;                                "yaml"
-;;;                                "haml"
-;;;                                "sass"
-;;;                                "cheat"
-;;;                                "feature-mode"
-;;;                                "html-fontify"
-;;;                                "color-theme"
-;;;                                "color-theme-zenburn"
-;;;                                "color-theme-vivid-chalk"
-                               ;; Complicated ones
-;;;                                "nxhtml"
-;;;                                "jabber"
-;;;                                "slime"
-;;;                                "swank-clojure"
-;;;                                   'paredit
-                                   )
+                                   'nxml-mode)
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()
