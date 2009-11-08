@@ -92,10 +92,14 @@ exec-to-string command, but it works and seems fast"
                    (flymake-mode t))))))
 
 ;; Rinari (Minor Mode for Ruby On Rails)
-;; removed: 'mumamo-after-change-major-mode-hook 
 (setq rinari-major-modes
-      (list 'dired-mode-hook 'ruby-mode-hook
-	    'css-mode-hook 'yaml-mode-hook 'javascript-mode-hook))
+      (list
+       ;;; 'mumamo-after-change-major-mode-hook 
+       'dired-mode-hook
+       'ruby-mode-hook
+       'css-mode-hook
+       'yaml-mode-hook
+       'javascript-mode-hook))
 
 ;; TODO: set up ri
 ;; TODO: electric

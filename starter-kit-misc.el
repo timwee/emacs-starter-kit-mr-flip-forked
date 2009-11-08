@@ -86,7 +86,9 @@
                                         (concat dotfiles-dir "backups")))))
 
 ;; nxhtml stuff
-(setq nxhtml-skip-welcome t
+(setq
+   ;; mumamo-chunk-coloring 'submode-colored
+      nxhtml-skip-welcome t
       indent-region-mode t
       rng-nxml-auto-validate-flag nil)
 ;; mumamo-chunk-coloring 'submode-colored
