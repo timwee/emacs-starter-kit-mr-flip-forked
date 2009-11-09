@@ -27,6 +27,7 @@
 ;; ;(global-set-key   [backspace]	     'backward-delete-char)
 
 
+(global-set-key  [kp-delete]            'delete-char)
 (global-set-key	 [C-delete]             'kill-word)
 (global-set-key	 [C-backspace]          'backward-kill-word)
 (global-set-key	 (kbd "C-s-.")          'overwrite-mode)
@@ -108,6 +109,7 @@
 (global-set-key	 (kbd "<C-f4>")         'repeat)
 (global-set-key	 (kbd "C-M-^")          'fixnewlines)
 ;; Fix the annoying accelerator issue on Mac
+(global-set-key	 (kbd "M-x")            'execute-extended-command)
 (global-set-key	 (kbd "C-M-x")          'execute-extended-command)
 (global-set-key	 (kbd "C-M-q")          'fill-paragraph)
 (global-set-key	 (kbd "C-M-,")          'tags-loop-continue)

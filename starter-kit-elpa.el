@@ -10,7 +10,8 @@
                                    'gist
                                    
                                    'rinari
-                                   'nxml-mode)
+  ;;                               'nxml-mode
+  )
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()

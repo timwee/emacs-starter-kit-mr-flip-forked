@@ -17,6 +17,11 @@
 
 ;; Load path etc.
 
+(setq       ns-option-modifier  'super )
+(setq       ns-command-modifier 'meta )
+(define-key global-map           [home] 'beginning-of-line)
+(define-key global-map           [end]  'end-of-line)
+
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
 
@@ -53,7 +58,7 @@
 (package-initialize)
 (require 'starter-kit-elpa)
 
-(load "elpa-to-submit/nxhtml/autostart")
+;; (load "elpa-to-submit/nxhtml/autostart")
 
 ;; Load up starter kit customizations
 
