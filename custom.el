@@ -64,6 +64,7 @@
  '(require-final-newline t)
  '(ruby-deep-indent-paren nil)
  '(scroll-bar-mode (quote right))
+ '(sh-basic-offset 2)
  '(sh-indentation 2)
  '(show-paren-mode t nil (paren))
  '(tab-always-indent nil)
