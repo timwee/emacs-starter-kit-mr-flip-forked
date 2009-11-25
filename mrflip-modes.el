@@ -30,8 +30,9 @@
     '("\\.sass$"                       . sass-mode)
     '("\\.pig\\'"                      . sql-mode)
     '("\\.ya?ml\\'"                    . yaml-mode)
-    '("\.feature\(\.erb\)?$"           . feature-mode)
-    '("\.ile\.txt\\'"                  . textile-mode)
+    '("\\.feature\(\\.erb\)?\\'"       . feature-mode)
+    '("\\.ile\.txt\\'"                 . textile-mode)
+    '("\\.php\d?\\'"                   . php-mode)
     ;; add more modes here
     ) auto-mode-alist))
 
@@ -55,6 +56,7 @@
 ;; (autoload 'sass-mode         "sass-mode"             "Mode for SASS (CSS done right)" t)
 ;; (autoload 'haml-mode         "haml-mode"             "Mode for HAML" t)
 ;; (autoload 'feature-mode      "cucumber-mode"         "Mode for editing cucumber files" t)
+(autoload 'php-mode      "php-mode"         "Mode for editing PHP files" t)
 
 (defun ruby-eval-buffer () (interactive)
   "Evaluate the buffer with ruby."

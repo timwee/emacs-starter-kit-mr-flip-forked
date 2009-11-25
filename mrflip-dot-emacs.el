@@ -32,6 +32,8 @@
 (prefer-coding-system    'utf-8)
 (column-number-mode t)		;; Display column number on mode line	
 
+(setq ns-pop-up-frames nil)
+
 ;; yasnippet
 ;; (yas/initialize)
 ;; (yas/load-directory "~/.emacs.d/snippets")
