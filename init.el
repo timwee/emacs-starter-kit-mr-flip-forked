@@ -76,6 +76,8 @@
 (require 'mrflip-dot-emacs)
 (require 'mrflip-defuns)
 (require 'mrflip-bindings)
+(require 'tim-custom)
+(require 'setup-erc)
 
 (regen-autoloads)
 (load custom-file 'noerror)
