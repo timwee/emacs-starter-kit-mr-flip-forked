@@ -16,7 +16,6 @@ point."
 (add-hook 'sh-mode-hook         'my-tab-fix)
 (add-hook 'emacs-lisp-mode-hook 'my-tab-fix)
 (add-hook 'clojure-mode-hook    'my-tab-fix)
-
 (autoload 'pymacs-apply "pymacs")
 (autoload 'pymacs-call "pymacs")
 (autoload 'pymacs-eval "pymacs" nil t)
@@ -26,4 +25,22 @@ point."
 ;;  '(add-to-list 'pymacs-load-path YOUR-PYMACS-DIRECTORY"))
 
 
+(require 'gccsense)
+
+(require 'google-c-style)
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+
+(defun set-exec-path-from-shell-PATH () 
+  (let ((path-from-shell (shell-command-to-string "$SHELL -i -c 'echo $PATH'"))) 
+    (setenv "PATH" path-from-shell) 
+    (setq exec-path (split-string path-from-shell path-separator)))) 
+(when (equal system-type 'darwin) 
+  ;; When started from Emacs.app or similar, ensure $PATH 
+  ;; is the same the user would see in Terminal.app 
+  (if window-system (set-exec-path-from-shell-PATH))) 
+
+(setq tab-width 2)
+(setq-default indent-tabs-mode nil)
+(setq-default py-indent-offset 2)
 (provide 'tim-custom)
