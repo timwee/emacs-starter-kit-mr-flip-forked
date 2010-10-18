@@ -24,6 +24,11 @@ point."
 ;;(eval-after-load "pymacs"
 ;;  '(add-to-list 'pymacs-load-path YOUR-PYMACS-DIRECTORY"))
 
+(add-to-list 'load-path "./vendor/mmm-mode")
+(require 'mmm-mako)
+
+(add-to-list 'auto-mode-alist '("\\.mako\\'" . html-mode))
+(mmm-add-mode-ext-class 'html-mode "\\.mako\\'" 'mako)
 
 (require 'gccsense)
 
