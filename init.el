@@ -76,8 +76,8 @@
 (require 'mrflip-dot-emacs)
 (require 'mrflip-defuns)
 (require 'mrflip-bindings)
-(require 'tim-custom)
 (require 'setup-erc)
+
 
 (regen-autoloads)
 (load custom-file 'noerror)
@@ -92,5 +92,6 @@
 (if (file-exists-p user-specific-config) (load user-specific-config))
 (if (file-exists-p user-specific-dir)
   (mapc #'load (directory-files user-specific-dir nil ".*el$")))
-
+  
+(require 'tim-custom)
 ;;; init.el ends here
