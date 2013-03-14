@@ -50,8 +50,14 @@ point."
 
   (if window-system (set-exec-path-from-shell-PATH))) 
 
-(setq tab-width 2)
+(setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 (setq-default py-indent-offset 2)
+
+;; (setq python-mode-hook
+;;           '(lambda () (progn
+;;                         (set-variable 'py-indent-offset 2)
+;;                         (set-variable 'py-smart-indentation nil)
+;;                         (set-variable 'indent-tabs-mode nil) )))
 (provide 'tim-custom)
 
